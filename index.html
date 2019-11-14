@@ -1,0 +1,137 @@
+<html>
+	<head>
+
+	<meta charset="UTF-8">
+	
+	<title>Smart to top link</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="matteo naif">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<style>
+
+		*{
+			color: #333333;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		body{
+			background: #FAFAFA;
+		}
+		h1{
+			color: #D34E24;
+			font-size: 3rem;
+		}
+
+		.container{
+			position: relative;
+			display: block;
+			max-width: 500px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		#toTop{
+			position: fixed;
+			display: none;
+			bottom: 0;
+			right: 1rem;
+			width: 50px;
+			height: 50px;
+			cursor: pointer;
+			background: #38726C;
+			text-align: center;
+			line-height: 50px;
+		}
+		#toTop:after{
+			content: "↑";
+			position: relative;
+			color: #fff;
+			font-size: 1.5rem;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Hello world!</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+
+			<h2>This is a placeholder</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+
+			<ul>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+			</ul>
+
+			<h2>This is a placeholder</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+
+			<ul>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+			</ul>
+
+			<h1>Hello world!</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+
+			<h2>This is a placeholder</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+
+			<ul>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+			</ul>
+
+			<h2>This is a placeholder</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolore molestias odio, ipsam est, omnis repellendus vel placeat necessitatibus tempora vero dolores tempore soluta temporibus sunt molestiae! At, quia velit?</p>
+
+			<ul>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+				<li>Hello</li>
+			</ul>
+
+		</div>
+
+		<div id="toTop"></div>
+
+
+<!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+        var lastScrollTop = 0;
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            // if i'm scrolling to the top after 1000px
+            if (y > 667 && y < lastScrollTop) { 
+                $('#toTop').fadeIn();
+            } else {
+                $('#toTop').fadeOut();
+            }
+            lastScrollTop = y;
+        });
+        $('#toTop').on('click',function(){
+            $('html, body').animate({scrollTop: '0px'}, 300);
+        });
+    </script>
+	</body>
+</html>
